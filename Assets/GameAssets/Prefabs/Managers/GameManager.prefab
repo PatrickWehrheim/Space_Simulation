@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7417122255350597616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7417122255350597618}
+  - component: {fileID: 7417122255350597617}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7417122255350597618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417122255350597616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -512.863, y: 439.54297, z: 233.40828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7417122255350597617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417122255350597616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11609e63cc7094448a80127f4d032de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectedUnitsSettings: {fileID: 11400000, guid: d8a91901134c24b4b8472c5b6ceb5d84,
+    type: 2}
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  ObstacleLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  _shipMaterials:
+  - {fileID: 2100000, guid: 9c2001936949b724884e46df298a5f65, type: 2}
+  - {fileID: 2100000, guid: e45ea26cf76b3b4419f0ca619ff36f1e, type: 2}
+  - {fileID: 2100000, guid: 1a4b3bf26e24a074dbe40611d27fef7b, type: 2}
+  _fighterObject: {fileID: 365955129544808157, guid: faaab9d7940802542818f6da89c3e929,
+    type: 3}
+  _squadBaseObject: {fileID: 510044724836880308, guid: a3fdef7fcec622f47910e633220ed12d,
+    type: 3}
+  _fregateObject: {fileID: 9199596982676315641, guid: 6d91af2033f999b458b522391aeb1fd3,
+    type: 3}
+  _laserObject: {fileID: 6494774924898083191, guid: 5fc6908a6017d924da2f7dfb43f9118f,
+    type: 3}
+  _fighterDistanceInSquad: 0

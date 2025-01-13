@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2153499941070200099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2153499941070200157}
+  - component: {fileID: 2153499941070200098}
+  - component: {fileID: 2153499941070200156}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2153499941070200157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153499941070200099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2153499941070200098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153499941070200099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d7a5fdcdbe96643bfa91d29446c88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _kiBehaviorSettings: {fileID: 11400000, guid: c076f086977a6174280cca2e3876b155,
+    type: 2}
+  _selectedUnitsSettings: {fileID: 11400000, guid: d8a91901134c24b4b8472c5b6ceb5d84,
+    type: 2}
+  _spriteBaseObject: {fileID: 510044724836880308, guid: a3fdef7fcec622f47910e633220ed12d,
+    type: 3}
+  _friendlyFighter: {fileID: 365955129544808157, guid: faaab9d7940802542818f6da89c3e929,
+    type: 3}
+  _friendlyFighterStartPosition: {x: -700, y: 0, z: -1000}
+  _enemyFighter: {fileID: 4398952389864015510, guid: e730777b45c5448428aaf44f045394f8,
+    type: 3}
+  _enemyFighterStartPosition: {x: 700, y: 0, z: 1000}
+  _fighterDistanceInSquad: 50
+  _fighterSprite: {fileID: 21300000, guid: d2c20952165f95c4ebdc8d7fb4a05f53, type: 3}
+  _spawnFighter: 1
+  _laserGreenObject: {fileID: 6494774924898083191, guid: 5fc6908a6017d924da2f7dfb43f9118f,
+    type: 3}
+--- !u!114 &2153499941070200156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153499941070200099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc21e34b04f6dc641b8f3798a9d9d921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectedUnitsSettings: {fileID: 11400000, guid: d8a91901134c24b4b8472c5b6ceb5d84,
+    type: 2}
+  _friendlyFregate: {fileID: 9199596982676315641, guid: 6d91af2033f999b458b522391aeb1fd3,
+    type: 3}
+  _friendlyFregateStartPosition: {x: -1000, y: 0, z: -1000}
+  _laserGreenObject: {fileID: 6494774924898083191, guid: 5fc6908a6017d924da2f7dfb43f9118f,
+    type: 3}
+  _enemyFregate: {fileID: 4369511268628359962, guid: cca74c4dd4e3569458dcc3ff46640fa8,
+    type: 3}
+  _enemyFregateStartPosition: {x: 1000, y: 0, z: 1000}
+  _spawnFregate: 1
+  _moveSpeed: 300
+  _acceleration: 20

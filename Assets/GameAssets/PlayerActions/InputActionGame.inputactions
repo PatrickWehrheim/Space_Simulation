@@ -1,0 +1,74 @@
+{
+    "name": "InputActionGame",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "e43a39b1-3a13-407a-967f-eaa2a026db93",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "ac25a89d-6531-4cf4-865b-5ed32e2fa5b6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveAction",
+                    "type": "Button",
+                    "id": "f292b6b9-2fea-49f9-a9bc-6877885f3620",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BackToMiddle",
+                    "type": "Button",
+                    "id": "cf2f0873-7ca5-46dd-afde-38584e17d7d9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "158d9fe0-c8f7-4c04-8697-1254f4b6d218",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b88ac037-73af-4d96-a48a-06c0534caa30",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4883dfb7-f146-4980-9423-fd2f5b92d489",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BackToMiddle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
