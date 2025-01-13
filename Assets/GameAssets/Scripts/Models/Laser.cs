@@ -36,6 +36,9 @@ public class Laser : MonoBehaviour
     {
         _laserColorGreenChannel = laserColorGreenChannel;
 
+        if (_particleSystems == null)
+            _particleSystems = GetComponentsInChildren<ParticleSystem>();
+
         foreach (var system in _particleSystems)
         {
             var systemMain = system.main;

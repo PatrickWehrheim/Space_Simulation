@@ -1,6 +1,5 @@
 ﻿
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class TaskFighterAttack : Node
@@ -30,17 +29,14 @@ public class TaskFighterAttack : Node
             Collider targetCollider = targetColliders[0];
             Transform targetTransform = targetCollider.transform;
             if (targetTransform.CompareTag("Squad"))
-            {
                 if (targetColliders.Length > 1)
                 {
                     targetCollider = targetColliders[1];
                     targetTransform = targetCollider.transform;
                 }
                 else
-                {
                     base.Evaluate();
-                }
-            }
+
             data.ObstacleColliders.Add(targetTransform);
             controller.MoveToPoint(targetTransform.position);
             controller.Attack(targetCollider);

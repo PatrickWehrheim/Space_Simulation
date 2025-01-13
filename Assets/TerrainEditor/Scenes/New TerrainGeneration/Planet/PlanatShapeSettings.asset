@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422e2739446850b4ca64f3ad17310796, type: 3}
+  m_Name: PlanatShapeSettings
+  m_EditorClassIdentifier: 
+  PlanetRadius: 200
+  UseFancySphere: 1
+  NoiseLayer:
+  - Enabled: 1
+    UseFirstLayerAsMask: 0
+    NoiseSettings:
+      Strength: 1.04
+      LayerCount: 5
+      Amplitude: 0.68
+      Persistance: 0.5
+      Frequency: 1.03
+      Roughness: 2.2
+      NoiseCenter: {x: 0, y: 0, z: 0}
+      GroundLevel: 0.75
+  - Enabled: 1
+    UseFirstLayerAsMask: 1
+    NoiseSettings:
+      Strength: 2
+      LayerCount: 6
+      Amplitude: 0.2
+      Persistance: 0.5
+      Frequency: 1
+      Roughness: 3.3
+      NoiseCenter: {x: 5.45, y: 2.43, z: 0}
+      GroundLevel: 0.5

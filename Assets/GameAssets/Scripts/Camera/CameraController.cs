@@ -65,9 +65,8 @@ public class CameraController : MonoBehaviour
                     {
                         FighterController fighterController = _hit.transform.gameObject.GetComponent<FighterController>();
                         if (fighterController == null)
-                        {
                             fighterController = _hit.transform.gameObject.GetComponentInParent<FighterController>();
-                        }
+                        
                         fighterController.IsClicked();
                         _selectedUnitsSettings.SelectedUnits.Add(fighterController.SquadController);
                     }
@@ -75,9 +74,8 @@ public class CameraController : MonoBehaviour
                     {
                         SquadController squadController = _hit.transform.gameObject.GetComponent<SquadController>();
                         if (squadController == null)
-                        {
                             squadController = _hit.transform.gameObject.GetComponentInParent<SquadController>();
-                        }
+                        
                         squadController.IsClicked();
                         _selectedUnitsSettings.SelectedUnits.Add(squadController);
                     }
@@ -85,28 +83,18 @@ public class CameraController : MonoBehaviour
                     {
                         FregateController fregateController = _hit.transform.gameObject.GetComponent<FregateController>();
                         if (fregateController == null)
-                        {
                             fregateController = _hit.transform.gameObject.GetComponentInParent<FregateController>();
-                        }
+                        
                         fregateController.IsClicked();
                         _selectedUnitsSettings.SelectedUnits.Add(fregateController);
                     }
                 }
                 else
                 {
-                    List<ISelectable> units = new List<ISelectable>();
                     foreach (var unit in _selectedUnitsSettings.SelectedUnits)
-                    {
-                        units.Add(unit);
-                    }
-
-                    foreach (var unit in _selectedUnitsSettings.SelectedUnits)
-                    {
                         unit.Deselect();
-                        units.Remove(unit);
-                    }
 
-                    _selectedUnitsSettings.SelectedUnits = units;
+                    _selectedUnitsSettings.SelectedUnits.Clear();
                 }
             }
         }
@@ -114,22 +102,14 @@ public class CameraController : MonoBehaviour
 
     public void OnRightClick(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && _selectedUnitsSettings.SelectedUnits.Count > 0)
         {
-            if (_selectedUnitsSettings.SelectedUnits.Count > 0)
+            _ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            if (Physics.Raycast(_ray, out _hit) && _hit.transform.CompareTag("Ground"))
             {
-                _ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-                if (Physics.Raycast(_ray, out _hit))
-                {
-                    if (_hit.transform.CompareTag("Ground"))
-                    {
-                        Vector3 point = new Vector3(_hit.point.x, 0, _hit.point.z);
-                        foreach (ISelectable selectable in _selectedUnitsSettings.SelectedUnits)
-                        {
-                            selectable.OnRightClick(point);
-                        }
-                    }
-                }
+                Vector3 point = new Vector3(_hit.point.x, 0, _hit.point.z);
+                foreach (ISelectable selectable in _selectedUnitsSettings.SelectedUnits)
+                    selectable.OnRightClick(point);
             }
         }
     }
@@ -137,8 +117,6 @@ public class CameraController : MonoBehaviour
     public void OnSpacePressed(InputAction.CallbackContext context)
     {
         if (context.started)
-        {
             transform.position = _startPosition;
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿
+
 public interface IBoid
 {
     public float AlignmentDefault { get; }
